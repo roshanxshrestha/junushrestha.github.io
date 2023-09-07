@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Junu Shrestha</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap");
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #222;
+        color: #fff;
+        margin: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        overflow: hidden;
+      }
+
+      #container {
+        text-align: center;
+        opacity: 0;
+        transform: translateY(100px);
+        transition: opacity 1s ease, transform 1s ease;
+      }
+
+      #container.show {
+        opacity: 1;
+        transform: translateY(0);
+      }
+      #container:hover {
+        transform: scale(1.1);
+      }
+
+      #name {
+        color: white;
+        font-weight: 500;
+        font-size: 50px;
+        font-family: "Dancing Script", cursive;
+        margin-top: 30px;
+        margin-bottom: 40px;
+      }
+
+      #image {
+        width: 250px;
+        height: 250px;
+        border-radius: 50%;
+        overflow: hidden;
+        margin: 0 auto;
+        box-shadow: 1px 2px 15px rgba(255, 255, 255, 0.5);
+        transition: box-shadow 0.3s ease-in-out;
+      }
+      #image:hover {
+        box-shadow: 1px 2px 15px rgba(239, 176, 68, 0.73);
+      }
+      #image::after {
+        box-shadow: 1px 2px 15px rgba(239, 176, 68, 0.73);
+        transition: opacity 0.3s ease-in-out;
+      }
+
+      img {
+        height: 250px;
+        width: 250px;
+        object-fit: cover;
+        border-radius: 6px;
+        box-shadow: 1px 2px 30px var(--main-color);
+      }
+      a:link,
+      :visited,
+      :active {
+        text-decoration: none;
+      }
+      .owner {
+        color: transparent;
+      }
+    </style>
+  </head>
+  <body>
+    <a href="https://www.instagram.com/_junushrestha_/" target="_blank">
+      <div id="container">
+        <div id="image">
+          <img
+            src="./assets/images/junushrestha.JPG"
+            alt="Junu Shrestha Image"
+          />
+        </div>
+        <div id="name">Junu Shrestha</div>
+        <a
+          class="owner"
+          href="https://stharoshan.com.np/"
+          target="_blank"
+          rel="noopener noreferrer"
+          >Roshan Shrestha</a
+        >
+      </div>
+    </a>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const container = document.getElementById("container");
+        container.classList.add("show");
+      });
+    </script>
+  </body>
+</html>
